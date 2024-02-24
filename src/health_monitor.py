@@ -36,7 +36,6 @@ def srre(nir: np.ndarray, red_edge: np.ndarray) -> np.ndarray:
     return result
 
 def evi(nir: np.ndarray, red: np.ndarray, blue: np.ndarray, g =2.5, c1 = 6, c2 = 7.5, l = 1, scale = 0.0001) -> np.ndarray:
-
     #for some reason you have to scale it down? See below:
     #https://community.esri.com/t5/arcgis-spatial-analyst-questions/formula-for-enhanced-vegetation-index-evi-in/td-p/32453
     top = (nir*scale-red*scale) *g
